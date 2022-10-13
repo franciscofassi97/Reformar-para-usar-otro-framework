@@ -1,0 +1,30 @@
+<section>
+	<h1>Cargar producto</h1>
+	<div class="box">
+		<h1>Bienvenido {{nombreUsuario}}</h1>
+		{{!-- <button onclick="cerrarSesion()">Cerrar Session</button> --}}
+		<form action="/api/usuarios/logout" method="post">
+			<input type="submit" value="Cerrar Session">
+		</form>
+		<br>
+		<div class="box">
+			{{!-- <form action="/api/productos/create" method="post"> --}}
+				<form onsubmit="return crearProducto()">
+					<label for="title">Nombre</label>
+					<input type="text" name="title" placeholder="Ingrese nombre" id="title">
+					<br>
+					<label for="price">Precio</label>
+					<input type="text" name="price" placeholder="Ingrese precio" id="price">
+					<br>
+					<label for="thumbnail">Url imagen</label>
+					<input type="text" name="thumbnail" placeholder="Ingrese Url de imagen" id="thumbnail">
+					<br>
+					<input type="submit" value="Guardar">
+				</form>
+				<br>
+
+		</div>
+</section>
+{{> listTable }}
+
+{{> chat }}
